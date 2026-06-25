@@ -1,0 +1,335 @@
+
+        /* --- General Reset & Styling --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            color: #333;
+            background-color: #f4f4f4;
+        }
+
+        /* --- Navbar / Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        /* --- Slide Down Menu --- */
+        .menu-btn {
+            font-size: 1.5rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #2c3e50;
+        }
+
+        .dropdown-menu {
+            position: fixed;
+            top: -100%; /* Hidden by default above the viewport */
+            left: 0;
+            width: 100%;
+            background-color: #2c3e50;
+            transition: top 0.4s ease-in-out;
+            z-index: 999;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            padding: 80px 0 20px 0; /* Top padding to prevent header overlap */
+        }
+
+        .dropdown-menu.active {
+            top: 0; /* Slide down into view */
+        }
+
+        .dropdown-menu ul {
+            list-style: none;
+            text-align: center;
+        }
+
+        .dropdown-menu ul li {
+            padding: 15px 0;
+        }
+
+        .dropdown-menu ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+        }
+
+        .dropdown-menu ul li a:hover {
+            color: #3498db;
+        }
+
+        /* --- Section Configurations (Tabs stacked vertically) --- */
+        section {
+            padding: 100px 40px 80px 40px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        /* Alternating Background Colors for Sections */
+        #greetings { background-color: #f9f9f9; }
+        #about-me   { background-color: #eaedd0; } /* Subtle cream tint */
+        #skills     { background-color: #e8f4f8; } /* Light blue tint */
+        #education  { background-color: #f2ebee; } /* Light mauve tint */
+        #projects   { background-color: #edf7f2; } /* Light mint tint */
+
+        /* --- Common Elements --- */
+        h1 { font-size: 3rem; margin-bottom: 15px; color: #2c3e50; }
+        h2 { font-size: 2.5rem; margin-bottom: 25px; color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; inline-size: max-content; margin-left: auto; margin-right: auto;}
+        p { font-size: 1.2rem; max-width: 600px; margin-bottom: 20px; line-height: 1.6; }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .btn:hover { background-color: #2980b9; transform: translateY(-2px); }
+
+        /* --- Tab 1: Greetings Specifics (Updated for Left-Alignment) --- */
+        #greetings {
+            text-align: left;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 50px;
+        }
+
+        .greetings-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        #greetings h1 {
+            margin-bottom: 5px;
+        }
+
+        #greetings h2 {
+            margin: 0 0 15px 0;
+            border: none;
+            padding: 0;
+            font-size: 2.8rem;
+        }
+
+        /* Unified style and sizing for the inline typing text */
+        .typing-wrapper {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #3498db;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        #element {
+            color: #2c3e50; /* Slightly different shade for the animated text if desired */
+            border-bottom: 2px solid #3498db;
+        }
+
+        .social-links {
+            margin-top: 25px;
+            display: flex;
+            gap: 20px;
+        }
+        .social-links a {
+            color: #2c3e50;
+            font-size: 2rem;
+            transition: color 0.3s;
+        }
+        .social-links a:hover { color: #3498db; }
+        
+        .profile-placeholder {
+            width: 300px;
+            height: 300px;
+            background-color: #ddd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            color: #666;
+            border: 4px solid #ffffff;
+            box-shadow: 0 4px 10px rgba(177, 175, 175, 0.1);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        /* Responsive design for home page layout */
+        @media (max-width: 768px) {
+            #greetings {
+                flex-direction: column-reverse;
+                text-align: center;
+                align-items: center;
+                padding-top: 120px;
+            }
+            .greetings-content {
+                align-items: center;
+            }
+            #greetings h2 {
+                margin: 0 auto 15px auto;
+            }
+        }
+
+        /* --- Tab 2: About Me Specifics --- */
+        .about-img {
+            width: 14a0px;
+            height: 140px;
+            background-color: #ccc;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* --- Tab 3: Skills Specifics --- */
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 900px;
+            margin-top: 30px;
+        }
+        .skill-card {
+            background-color: #ffffff;
+            padding: 20px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            min-width: 140px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* --- Tab 4: Education (Hover Details effect) --- */
+        .edu-container {
+            width: 100%;
+            max-width: 600px;
+        }
+        .edu-item {
+            background-color: #ffffff;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+        .edu-item .hover-detail {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            color: #7f8c8d;
+            margin-top: 0;
+        }
+        .edu-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .edu-item:hover .hover-detail {
+            max-height: 50px;
+            opacity: 1;
+            margin-top: 10px;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .footer-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 30px;
+        }
+        .footer-sec {
+            flex: 1;
+            min-width: 250px;
+        }
+        .footer-sec h3 { margin-bottom: 15px; color: #3498db; }
+        .footer-sec ul { list-style: none; }
+        .footer-sec ul li { margin-bottom: 8px; }
+        .footer-sec ul li a { color: #ecf0f1; text-decoration: none; }
+        .footer-sec ul li a:hover { color: #3498db; }
+        .footer-bottom {
+            margin-top: 30px;
+            border-top: 1px solid #34495e;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* --- Scroll to Top Arrow Button --- */
+        .scroll-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #3498db;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background 0.3s, transform 0.2s, opacity 0.3s;
+            z-index: 1000;
+            opacity: 0;
+            pointer-events: none;
+        }
+        .scroll-top.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .scroll-top:hover {
+            background-color: #2980b9;
+            transform: translateY(-5px);
+        }

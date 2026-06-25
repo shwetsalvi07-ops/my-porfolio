@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shwet's Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">Shwet Salvi</div>
+        <button class="menu-btn" onclick="toggleMenu()" aria-label="Toggle Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <nav class="dropdown-menu" id="dropdownMenu">
+        <ul>
+            <li><a href="#greetings" onclick="toggleMenu()">Home</a></li>
+            <li><a href="#about-me" onclick="toggleMenu()">About Me</a></li>
+            <li><a href="#skills" onclick="toggleMenu()">Skills</a></li>
+            <li><a href="#education" onclick="toggleMenu()">Education</a></li>
+            <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="greetings">
+        <div class="greetings-content">
+            <h1>Welcome,</h1>
+            <h2>I'm Shwet Salvi</h2>
+            
+            <div class="typing-wrapper">
+                I am into <span id="element"></span>
+            </div>
+
+            <p>I build elegant, functional, and user-centric web experiences.</p>
+            
+            <a href="#about-me" class="btn">About Me</a>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/shwet-salvi-51269b32a/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/shwetsalvi07-ops" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:shwetsalvi07@gmail.com" title="Gmail"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+            <img src="Shwet Salvi Profile Picture.png" alt="Shwet Salvi Profile Picture"
+            class="profile-placeholder">
+    </section>
+
+    <section id="about-me">
+        <h2>About Me</h2>
+         <img src="my-profile.png" alt="my-profile"
+            class="about-img">
+        <p><strong>Description:</strong> Passionate developer dedicated to creating seamless layouts. Always experimenting with clean layouts and interactive components.</p>
+        <p><strong>Email:</strong> shwetsalvi07@gmail.com</p>
+        <p><strong>Address:</strong> Mumbai, India 
+        </p>
+        <br>
+        <a href="my-resume.pdf" class="btn" target="_blank"><i class="fas fa-file-pdf"></i> View Resume</a>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+    <div class="skills-container">
+        <div class="skill-card">
+            <i class="fab fa-html5" style="color: #e34c26;"></i>
+            <h3>HTML5</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
+            <h3>CSS3</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-js" style="color: #F7DF1E;"></i>
+            <h3>JavaScript</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fas fa-mobile-alt" style="color: #3498db;"></i>
+            <h3>Responsive Design</h3>
+        </div>
+        <div class="skill-card">
+            <i class="fab fa-git-alt" style="color: #333;"></i>
+            <h3>Git & GitHub</h3>
+        </div>
+    <div class="skill-card">
+            <i class="fas fa-database" style="color: #333;"></i>
+            <h3>MySQL</h3>
+        </div>
+         <div class="skill-card">
+            <i class="fab fa-wordpress" style="color: #333;"></i>
+            <h3>WordPress</h3>
+        </div>
+
+    </div>
+    </section>
+
+    <section id="education">
+        <h2>Education</h2>
+        <p style="font-size: 1rem; color: #7f8c8d; margin-bottom: 30px;">(Hover over items to see details)</p>
+        
+        <div class="edu-container">
+            <div class="edu-item">
+                <h3>High School Name</h3>
+                <div class="hover-detail">Graduated with <strong>77%</strong> score.</div>
+            </div>
+            
+            <div class="edu-item">
+                <h3>Senior Secondary College Name</h3>
+                <div class="hover-detail">Completed with <strong>56%</strong> aggregate.</div>
+            </div>
+            
+            <div class="edu-item">
+                <h3> Sathaye College</h3>
+                <p style="font-size: 0.95rem; margin: 5px 0 0 0; color: #3498db;">Pursuing Bachelor's Degree in Information Technology</p>
+                <div class="hover-detail">Current CGPA status: 6.7 <strong>Ongoing</strong></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here will go your amazing collection of work, applications, and web designs.</p>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-sec">
+                <h3>Thank You</h3>
+                <p style="font-size: 1rem; color: #bdc3c7;">Thank you for visiting my portfolio! Let's build something spectacular together.</p>
+            </div>
+            <div class="footer-sec">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#greetings">Home</a></li>
+                    <li><a href="#about-me">About Me</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div>
+            <div class="footer-sec">
+                <h3>Contact Info</h3>
+                <p style="font-size: 1rem; color: #bdc3c7; margin-bottom: 8px;"><i class="fas fa-phone"></i> Tel: +91 8850195816</p>
+                <p style="font-size: 1rem; color: #bdc3c7; margin-bottom: 8px;"><i class="fas fa-envelope"></i> Mail: shwetsalvi07@gmail.com</p>
+                <p style="font-size: 1rem; color: #bdc3c7; margin-bottom: 15px;"><i class="fas fa-map-marker-alt"></i> Address: Mumbai, India</p>
+                <div class="social-links" style="justify-content: center; margin-top: 0;">
+                    <a href="https://www.linkedin.com/in/shwet-salvi-51269b32a/" target="_blank" style="color: #ecf0f1;"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/shwetsalvi07-ops" target="_blank" style="color: #ecf0f1;"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Shwet Salvi. All Rights Reserved.
+        </div>
+    </footer>
+
+    <a href="#greetings" class="scroll-top" id="scrollTopBtn" title="Go to Home">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            // Feel free to replace these sample items with your real skills!
+            strings: ['Web Development.', 'Web Designer.', 'Problem Solving.'],
+            typeSpeed: 60,
+            backSpeed: 40,
+            loop: true
+        });
+    </script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('dropdownMenu');
+            menu.classList.toggle('active');
+        }
+
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.add('visible');
+            } else {
+                scrollTopBtn.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
